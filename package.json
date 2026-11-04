@@ -1,0 +1,22 @@
+{
+  "name": "ai-embedded-workstation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI 嵌入式工作站 — 架构基线与关键技术验证（v1 任务书）",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "validate": "node --import tsx --test validation/B-multimodel/contract.test.ts validation/C-terminal/terminal.test.ts validation/F-recovery/recovery.test.ts",
+    "validate:term": "node --import tsx --test validation/C-terminal/terminal.test.ts",
+    "validate:recovery": "node --import tsx --test validation/F-recovery/recovery.test.ts",
+    "validate:contract": "node --import tsx --test validation/B-multimodel/contract.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
